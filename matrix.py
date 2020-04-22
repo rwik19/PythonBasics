@@ -1,7 +1,4 @@
-def main():
-    A = [[1,0,2],[3,1,1],[0,0,2]]
-    B = [[2,1,0],[1,3,1],[2,0,1]]
-    print(subMatrix(A,0,1))
+#some operations on matrices without using numpy
 
 def Sum(A,B):
     if len(A)==len(B) and len(A[0])==len(B[0]):
@@ -27,5 +24,3 @@ def subMatrix(A,i,j):
     X = transpose(X)
     del X[j]
     return transpose(X)
-
-main()

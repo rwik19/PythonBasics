@@ -14,8 +14,9 @@ def solve(guess,epsilon):
     number_of_guesses = 0
     while abs(p(guess)) >= epsilon:
         number_of_guesses += 1
-        if p1(guess) == 0:
-            print("Try some other initial guess.")
+        #Stop division by 0 or too many steps
+        if p1(guess) == 0 or number_of_guesses>10000:
+            print("Try some other initial guess or acceptable error.")
             return 
         guess -= p(guess)/p1(guess)
     print(f"Root = {guess}\nNumber of guesses = {number_of_guesses}")
